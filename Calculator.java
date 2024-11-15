@@ -1,16 +1,18 @@
 package calculator;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Calculator {
 
     // 속성
-    ArrayList<Integer> resultList = new ArrayList<Integer>();
+    Queue<Integer> resultQueue = new LinkedList<>();
 
     // 생성자
-    Calculator () {
-
+    Calculator (Queue<Integer> resultQueue) {
+        this.resultQueue = resultQueue;
     }
+
     // 메서드
     public int calculate (int num1, int num2, char operator) {
         int result = 0;
