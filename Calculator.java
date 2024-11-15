@@ -21,11 +21,9 @@ public class Calculator {
         } else if (operator == '*') {
             result = num1 * num2;
         } else if (operator == '/') {
-            if (num2 == 0){
-                System.out.println("나눗셈 연산에서 분모(num2)에 0이 입력될 수 없습니다.");
-            }
-
             result = num1 / num2;
+        } else {
+            System.out.println("잘못된 사칙연산 기호입니다.");
         }
         return result;
     }
