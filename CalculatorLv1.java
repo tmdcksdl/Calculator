@@ -11,6 +11,11 @@ public class CalculatorLv1 {
 
         System.out.print("두 번째 정수를 입력해주세요.(0 포함) : ");
         int num2 = scanner.nextInt();
+        scanner.nextLine();
 
+        System.out.print("사칙연산 기호(+, -, *, /)를 입력해주세요.");
+        String operator = scanner.nextLine();
+
+        System.out.println(num1 + " " + num2 + " " + operator);
     }
 }
