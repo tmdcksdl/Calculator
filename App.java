@@ -26,15 +26,15 @@ public class App {
             scanner.nextLine();
 
             System.out.print("사칙연산 기호(+, -, *, /)를 입력해주세요. : ");
-            String operator = scanner.nextLine();
+            char operator = scanner.next().charAt(0);
 
-            if (operator.charAt(0) == '+') {
+            if (operator == '+') {
                 result = num1 + num2;
-            } else if (operator.charAt(0) == '-') {
+            } else if (operator == '-') {
                 result = num1 - num2;
-            } else if (operator.charAt(0) == '*') {
+            } else if (operator == '*') {
                 result = num1 * num2;
-            } else if (operator.charAt(0) == '/') {
+            } else if (operator == '/') {
                 if (num2 == 0) {
                     System.out.println("나눗셈 연산에서 분모(num2)에 0이 입력될 수 없습니다.");
                     continue;
