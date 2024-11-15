@@ -6,11 +6,11 @@ import java.util.Queue;
 public class Calculator {
 
     // 속성
-    Queue<Integer> resultQueue = new LinkedList<>();
+    private Queue<Integer> queue = new LinkedList<>();
 
     // 생성자
     Calculator (Queue<Integer> resultQueue) {
-        this.resultQueue = resultQueue;
+        this.queue = resultQueue;
     }
 
     // 메서드
@@ -28,5 +28,13 @@ public class Calculator {
             System.out.println("잘못된 사칙연산 기호입니다.");
         }
         return result;
+    }
+
+    Queue<Integer> getQueue () {
+        return queue;
+    }
+
+    void setQueue (int result) {
+        queue.add(result);
     }
 }

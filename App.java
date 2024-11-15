@@ -30,9 +30,9 @@ public class App {
 
             int result = calculator.calculate(num1, num2, operator);
 
-            queue.add(result);
+            calculator.setQueue(result);
 
-            System.out.println("결과 : " + result);
+            System.out.println(calculator.getQueue());
 
 
             // 더 진행할지, 그만할지 물어보기.
