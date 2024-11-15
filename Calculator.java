@@ -12,15 +12,15 @@ public class Calculator {
 
     }
     // 메서드
-    public int calculate (int num1, int num2, String operator) {
+    public int calculate (int num1, int num2, char operator) {
         int result = 0;
-        if (operator.charAt(0) == '+') {
+        if (operator == '+') {
             result = num1 + num2;
-        } else if (operator.charAt(0) == '-') {
+        } else if (operator == '-') {
             result = num1 - num2;
-        } else if (operator.charAt(0) == '*') {
+        } else if (operator == '*') {
             result = num1 * num2;
-        } else if (operator.charAt(0) == '/') {
+        } else if (operator == '/') {
             if (num2 == 0){
                 System.out.println("나눗셈 연산에서 분모(num2)에 0이 입력될 수 없습니다.");
             }
