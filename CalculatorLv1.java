@@ -8,31 +8,43 @@ public class CalculatorLv1 {
 
         int result = 0;
 
-        System.out.print("첫 번째 정수를 입력해주세요.(0 포함) : ");
-        int num1 = scanner.nextInt();
+        while (true) {
+            // 연산 시작 전에 진행할지, 그만할지 물어보고 진행.
+            System.out.print("continue(진행) / exit(종료) : ");
+            String exit = scanner.nextLine();
 
-        System.out.print("두 번째 정수를 입력해주세요.(0 포함) : ");
-        int num2 = scanner.nextInt();
-        scanner.nextLine();
-
-        System.out.print("사칙연산 기호(+, -, *, /)를 입력해주세요. : ");
-        String operator = scanner.nextLine();
-
-//        System.out.println(num1 + " " + num2 + " " + operator.charAt(0));
-
-        if (operator.charAt(0) == '+') {
-            result = num1 + num2;
-        } else if (operator.charAt(0) == '-') {
-            result = num1 - num2;
-        } else if (operator.charAt(0) == '*') {
-            result = num1 * num2;
-        } else if (operator.charAt(0) == '/') {
-            if (num2 == 0) {
-                System.out.println("나눗셈 연산에서 분모(num2)에 0이 입력될 수 없습니다.");
+            if (exit.equals("exit")) {
+                System.out.println("프로그램을 종료합니다.");
+                break;
             }
-            result = num1 / num2;
+
+            System.out.print("첫 번째 정수를 입력해주세요.(0 포함) : ");
+            int num1 = scanner.nextInt();
+
+            System.out.print("두 번째 정수를 입력해주세요.(0 포함) : ");
+            int num2 = scanner.nextInt();
+            scanner.nextLine();
+
+            System.out.print("사칙연산 기호(+, -, *, /)를 입력해주세요. : ");
+            String operator = scanner.nextLine();
+
+            if (operator.charAt(0) == '+') {
+                result = num1 + num2;
+            } else if (operator.charAt(0) == '-') {
+                result = num1 - num2;
+            } else if (operator.charAt(0) == '*') {
+                result = num1 * num2;
+            } else if (operator.charAt(0) == '/') {
+                if (num2 == 0) {
+                    System.out.println("나눗셈 연산에서 분모(num2)에 0이 입력될 수 없습니다.");
+                    continue;
+                }
+
+                result = num1 / num2;
+            }
+
+            System.out.println("결과 : " + result);
         }
 
-        System.out.println("결과 : " + result);
     }
 }
