@@ -1,15 +1,18 @@
 package calculator;
 
+import java.util.ArrayList;
+
 public class Calculator {
 
     // 속성
+    ArrayList<Integer> resultList = new ArrayList<Integer>();
 
     // 생성자
     Calculator () {
 
     }
     // 메서드
-    int operate (int num1, int num2, String operator) {
+    public int calculate (int num1, int num2, String operator) {
         int result = 0;
         if (operator.charAt(0) == '+') {
             result = num1 + num2;
