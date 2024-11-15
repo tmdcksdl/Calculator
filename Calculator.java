@@ -37,4 +37,8 @@ public class Calculator {
     void setQueue (int result) {
         queue.add(result);
     }
+
+    void removeResult () {
+        queue.poll();
+    }
 }

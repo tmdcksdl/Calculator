@@ -7,7 +7,6 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         Queue<Integer> queue = new LinkedList<>();
 
         Calculator calculator = new Calculator(queue);
@@ -30,7 +29,15 @@ public class App {
 
             int result = calculator.calculate(num1, num2, operator);
 
+            System.out.println("결과 : " + result);
             calculator.setQueue(result);
+
+            System.out.print("가장 오래된 결과를 삭제하시겠습니까?(yes / no) : ");
+            String answer = scanner.nextLine();
+
+            if (answer.equals("yes")) {
+                calculator.removeResult();
+            }
 
             System.out.println(calculator.getQueue());
 
