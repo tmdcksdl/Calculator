@@ -2,7 +2,7 @@ package calculator;
 
 import java.util.Scanner;
 
-public class CalculatorLv1 {
+public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -41,6 +41,9 @@ public class CalculatorLv1 {
                 }
 
                 result = num1 / num2;
+            } else {
+                System.out.println("잘못된 사칙연산 기호 입니다.");
+                continue;
             }
 
             System.out.println("결과 : " + result);
