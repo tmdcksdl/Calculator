@@ -37,6 +37,7 @@ public class App {
             // operator 메서드를 이용해서 한 문장으로 줄일 수 있다. 코드 가독성을 높이기 위해 사용한다.
             int result = calculatorLv2.operate(firstNumber, secondNumber, operator);
 
+            // 사칙연산 결과 출력
             System.out.println("연산 결과 : " + result);
 
             // 종료를 물어보는 안내 문구 출력
