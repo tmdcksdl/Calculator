@@ -48,4 +48,9 @@ public class CalculatorLv2 {
     public Queue<Integer> getQueue () {
         return this.queue;
     }
+
+    // 큐에 가장 먼저 저장된 데이터 삭제하는 메서드
+    public void pollQueue () {
+        this.queue.poll();
+    }
 }

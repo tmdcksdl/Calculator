@@ -55,6 +55,20 @@ public class App {
                 System.out.println(calculatorLv2.getQueue());
             }
 
+            // 큐에 저장된 값을 삭제할지 물어보는 안내 문구 출력
+            System.out.println("데이터를 삭제하시겠습니까?");
+            System.out.print("1. 삭제 | 2. 패스 : ");
+            // 사용자로부터 입력 받은 정수를 answerNumber2 변수에 할당
+            int answerNumber2 = scanner.nextInt();
+
+            // if 조건문을 사용해서 큐에 저장된 데이터 삭제할지 말지 결정
+            // 데이터를 삭제한 후 큐에 저장되어 있는 값 출력
+            if (answerNumber2 == 1) {
+                calculatorLv2.pollQueue();
+                System.out.println(calculatorLv2.getQueue());
+            }
+
+
             // 프로그램 종료 부분에서 바로 넘어가는 문제 해결
             scanner.nextLine();
 
