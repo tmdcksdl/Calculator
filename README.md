@@ -66,6 +66,6 @@
 ```plaintext
 ├── CalculatorLv1.java    # Lv1 계산기
 ├── App.java              # 메인 클래스 (Lv2 계산기)
-├── Calculator.java      # Lv2 계산기
-├── README.md       # 프로젝트 설명 파일
+├── Calculator.java       # Lv2 계산기
+├── README.md             # 프로젝트 설명 파일
 ```
