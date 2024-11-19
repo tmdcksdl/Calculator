@@ -8,12 +8,10 @@ public class App {
     public static void main(String[] args) {
         // 사용자로부터 콘솔 입력을 받을 수 있도록 Scanner 객체 생성
         Scanner scanner = new Scanner(System.in);
-        // 지역 변수
-        Queue<Integer> resultQueue = new LinkedList<>();
 
         // calculatorLv2 생성자를 통해 인스턴스화
         // 객체를 생성할 때 생성자를 통해 resultQueue 전달한다.
-        CalculatorLv2 calculatorLv2 = new CalculatorLv2(resultQueue);
+        CalculatorLv2 calculatorLv2 = new CalculatorLv2();
 
         // 무한 반복을 수행하기 위해 while 반복문의 조건을 true로 설정
         while (true) {

@@ -11,8 +11,8 @@ public class CalculatorLv2 {
     private Queue<Integer> queue;
 
     // 생성자 (조립설명서)
-    CalculatorLv2 (Queue<Integer> queue) {
-        this.queue = queue;  // 생성자를 통해 초기화! resultQueue가 할당된다.
+    CalculatorLv2 () {
+        this.queue = new LinkedList<>();  // 생성자를 통해 초기화! resultQueue가 할당된다.
     }
 
     // 메서드
