@@ -45,8 +45,14 @@ public class CalculatorLv1 {
                 System.out.println("잘못된 사칙연산 기호입니다. 다시 입력해주세요.");
             }
 
+            // 사칙연산 결과 출력
+            System.out.println(firstNumber + " " + operator + " " + secondNumber + " = " + result);
+
+            // 프로그램 종료 부분에서 바로 넘어가는 문제 해결
+            scanner.nextLine();
+
             // 종료를 물어보는 안내 문구 출력
-            System.out.println("프로그램을 종료하시겠습니까? (exit 입력 시 종료) : ");
+            System.out.print("프로그램을 종료하시겠습니까? (no-계속 진행 | exit-종료) : ");
             // 사용자로부터 입력 받은 문자열을 answer 변수에 할당
             String answer = scanner.nextLine();
 
