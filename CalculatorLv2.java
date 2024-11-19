@@ -16,6 +16,7 @@ public class CalculatorLv2 {
     }
 
     // 메서드
+    // 사칙연산을 수행하는 메서드
     public int operate (int firstNumber, int secondNumber, char operator) {
         int result = 0;
 
@@ -36,5 +37,15 @@ public class CalculatorLv2 {
                 System.out.println("잘못된 사칙연산 기호입니다. 다시 입력해주세요.");
         }
         return result;
+    }
+
+    // 사칙연산 결과를 큐에 저장하게 하는 메서드
+    public void setQueue (int result) {
+        this.queue.add(result);
+    }
+
+    // 멤버 변수 큐의 값을 가져올 수 있는 메서드
+    public Queue<Integer> getQueue () {
+        return this.queue;
     }
 }
