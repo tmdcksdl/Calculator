@@ -10,7 +10,6 @@ public class App {
         Scanner scanner = new Scanner(System.in);
 
         // calculatorLv2 생성자를 통해 인스턴스화
-        // 객체를 생성할 때 생성자를 통해 resultQueue 전달한다.
         CalculatorLv2 calculatorLv2 = new CalculatorLv2();
 
         // 무한 반복을 수행하기 위해 while 반복문의 조건을 true로 설정
@@ -57,10 +56,10 @@ public class App {
             // if 조건문을 사용해서 결과를 저장할지 패스할지 결정
             // 결과를 저장한 후 큐에 저장되어 있는 값 출력
             if (answerNumber == 1) {
-                calculatorLv2.setQueue(result);
-                System.out.println("현재 저장된 값 : " + calculatorLv2.getQueue());
-            } else {
-                System.out.println("현재 저장된 값 : " + calculatorLv2.getQueue());
+                calculatorLv2.addQueue(result);
+                System.out.println("현재 저장된 값 : " + calculatorLv2.checkQueue());
+            } else if (answerNumber == 2) {
+                System.out.println("현재 저장된 값 : " + calculatorLv2.checkQueue());
             }
 
             // 구분선 추가
@@ -76,7 +75,7 @@ public class App {
             // 데이터를 삭제한 후 큐에 저장되어 있는 값 출력
             if (answerNumber2 == 1) {
                 calculatorLv2.pollQueue();
-                System.out.println("현재 저장된 값 : " + calculatorLv2.getQueue());
+                System.out.println("현재 저장된 값 : " + calculatorLv2.checkQueue());
             }
 
 

@@ -12,7 +12,7 @@ public class CalculatorLv2 {
 
     // 생성자 (조립설명서)
     CalculatorLv2 () {
-        this.queue = new LinkedList<>();  // 생성자를 통해 초기화! resultQueue가 할당된다.
+        this.queue = new LinkedList<>();  // 생성자를 통해 초기화!
     }
 
     // 메서드
@@ -39,17 +39,17 @@ public class CalculatorLv2 {
         return result;
     }
 
-    // 사칙연산 결과를 큐에 저장하게 하는 메서드
-    public void setQueue (int result) {
+    // 사칙연산 결과를 큐에 저장하게 하는 메서드 -> setter
+    public void addQueue (int result) {
         this.queue.add(result);
     }
 
-    // 멤버 변수 큐의 값을 가져올 수 있는 메서드
-    public Queue<Integer> getQueue () {
+    // 멤버 변수 큐의 값을 가져올 수 있는 메서드 -> getter
+    public Queue<Integer> checkQueue () {
         return this.queue;
     }
 
-    // 큐에 가장 먼저 저장된 데이터 삭제하는 메서드
+    // 큐에 가장 먼저 저장된 데이터 삭제하는 메서드 -> setter
     public void pollQueue () {
         this.queue.poll();
     }
